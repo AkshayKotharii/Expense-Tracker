@@ -1,0 +1,251 @@
+/* Global Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    max-width: 900px;
+}
+
+/* Main Heading Styling */
+.main-heading {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: orange;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Card Styling */
+.card {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.card h2 {
+    font-size: 1.75rem;
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+/* Form Group Styling */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #555;
+}
+
+.form-group input,
+.form-group select {
+    padding: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #007bff;
+}
+
+/* Button Styling */
+button {
+    padding: 12px;
+    width: 100%;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: orange;
+}
+
+button:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.5);
+}
+
+/* Notification Styling */
+.notification {
+    background-color: #28a745;
+    /* Green background for success */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 10px;
+    text-align: center;
+    display: none;
+    /* Initially hidden */
+}
+
+/* Total Amount Styling */
+h3 {
+    font-size: 1.2rem;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Transaction List Styling */
+#transactionList {
+    margin-top: 20px;
+    padding: 0;
+    list-style-type: none;
+    max-height: 200px;
+    /* Fixed height for scrolling */
+    overflow-y: auto;
+    /* Enable vertical scrolling */
+}
+
+#transactionList li {
+    padding: 12px;
+    margin: 5px 0;
+    border-radius: 5px;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+#transactionList li:hover {
+    transform: translateY(-3px);
+}
+
+.expense {
+    background-color: #dc3545;
+    /* Red for expenses */
+}
+
+.incoming {
+    background-color: #28a745;
+    /* Green for incoming money */
+}
+
+/* Popup Styling */
+.popup {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* Black background with opacity */
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+    width: 300px;
+}
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+}
+
+.close-btn:hover {
+    color: #FB5F01;
+    /* Hover effect */
+}
+
+/* Media Query for Phones */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .main-heading {
+        font-size: 2rem;
+    }
+
+    .card {
+        padding: 20px;
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .card h2 {
+        font-size: 1.5rem;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+
+    .form-group label {
+        font-size: 0.9rem;
+    }
+
+    .form-group input,
+    .form-group select {
+        font-size: 0.9rem;
+    }
+
+    h3 {
+        font-size: 1rem;
+    }
+
+    #transactionList li {
+        padding: 10px;
+    }
+
+    .popup-content {
+        width: 90%;
+        max-width: 280px;
+    }
+}
